@@ -1,7 +1,6 @@
-1 /* ´area de inclusi´on de bibliotecas externas */
-2 // ninguna librer´ıa que cargar
-3
-4 /* ´area de declaraci´on de clases */
+1 /* ´area de inclusion de bibliotecas externas */
+2 // ninguna libreria que carga
+4 /* ´area de declaracion de clases */
 5 clase Impar
 6 propiedades publicas :
 7 cadena hola

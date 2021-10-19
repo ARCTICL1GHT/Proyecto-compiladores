@@ -78,13 +78,14 @@ COMA = ","
 COMILLAS = "\""
 PUNTO = "."
 LETRAS = [a-zA-Z]+
+ENTRADA = [^\r\n]
 VARIABLEZ = {LETRAS}({NUMERO}|{LETRAS})*
 /* comments */
     Comment = {TraditionalComment} | {EndOfLineComment} | {DocumentationComment}
 
     TraditionalComment   = "/*" [^*] ~"*/" | "/*" "*"+ "/"
     // Comment can be the last line of the file, without line terminator.
-    EndOfLineComment     = {BARRA}{BARRA}{BARRA}* {VARIABLEZ}* {EspaciosBlancos}* {FinLinea}?
+    EndOfLineComment     = "//" {ENTRADA}* {FinLinea}?
     DocumentationComment = "/**" {CommentContent} "*"+ "/"
     CommentContent       = ( [^*] | \*+ [^/*] )*
 
