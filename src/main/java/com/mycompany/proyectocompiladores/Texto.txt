@@ -1,0 +1,48 @@
+1 /* ´area de inclusi´on de bibliotecas externas */
+2 // ninguna librer´ıa que cargar
+3
+4 /* ´area de declaraci´on de clases */
+5 clase Impar
+6 propiedades publicas :
+7 cadena hola
+8 metodos publicos :
+9 entero esImpar ( entero numero )
+10 si numero % 2 entonces
+11 devolver 1
+12 sino
+13 devolver 0
+14
+15 clase HolaMundo
+16 propiedades privadas:
+2
+17 entero a
+18 cadena nombre
+19 Impar i
+20 metodos publicos :
+21 constructor ()
+22 i = nuevo Impar ()
+23 a = 0
+24 nombre = ""
+25
+26 entero inicio ()
+27 escribir " escriba su nombre "
+28 // se guarda una cadena de texto en la variable nombre
+29 leer nombre ;
+30 escribir " escriba un valor entre 1 y 30"
+31 // se guarda un numero en la variable a
+32 leer a
+33 /* escribe en pantalla la constante junto
+34 * al valor de la variable nombre
+35 */
+36 escribir " Hola ", nombre
+37 si i. esImpar (a) entonces
+38 escribir "El numero que eligio es impar "
+39 sino
+40 escribir "El numero que eligio es par "
+41 devolver 0
+42
+43 /* ´area de declaraci´on de funci´on de carga inicial */
+44 entero Principal ()
+45 HolaMundo hola = instanciar HolaMundo ()
+46 hola . inicio ()
+47 devolver 0

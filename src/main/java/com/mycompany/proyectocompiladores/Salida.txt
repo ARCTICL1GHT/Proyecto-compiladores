@@ -1,0 +1,141 @@
+Encontré un comentario: /* ´area de inclusi´on de bibliotecas externas */ en linea: 0 columna: 2
+Encontré un comentario: // ninguna librer en linea: 1 columna: 2
+Encontré letras: a en linea: 1 columna: 21
+Encontré letras: que en linea: 1 columna: 23
+Encontré letras: cargar en linea: 1 columna: 27
+Encontré un comentario: /* ´area de declaraci´on de clases */ en linea: 3 columna: 2
+Encontré un clase: clase en linea: 4 columna: 2
+Encontré letras: Impar en linea: 4 columna: 8
+Encontré que es tipo: propiedades en linea: 5 columna: 2
+Encontré que es tipo: publicas en linea: 5 columna: 14
+Encontré un dos puntos: : en linea: 5 columna: 23
+Encontré una Cadena:  cadena en linea: 6 columna: 2
+Encontré letras: hola en linea: 6 columna: 9
+Encontré letras: metodos en linea: 7 columna: 2
+Encontré que es tipo: publicos en linea: 7 columna: 10
+Encontré un dos puntos: : en linea: 7 columna: 19
+Encontré un numero: entero en linea: 8 columna: 2
+Encontré letras: esImpar en linea: 8 columna: 9
+Encontré un parentesis de abertura: ( en linea: 8 columna: 17
+Encontré un numero: entero en linea: 8 columna: 19
+Encontré letras: numero en linea: 8 columna: 26
+Encontré un parentesis de cierre: ) en linea: 8 columna: 33
+Encontré una sentencia: si en linea: 9 columna: 3
+Encontré letras: numero en linea: 9 columna: 6
+Encontré un porcentaje: % en linea: 9 columna: 13
+Encontré una sentencia: entonces en linea: 9 columna: 17
+Encontré una sentencia: devolver en linea: 10 columna: 3
+Encontré una sentencia: sino en linea: 11 columna: 3
+Encontré una sentencia: devolver en linea: 12 columna: 3
+Encontré un clase: clase en linea: 14 columna: 3
+Encontré letras: HolaMundo en linea: 14 columna: 9
+Encontré que es tipo: propiedades en linea: 15 columna: 3
+Encontré que es tipo: privadas en linea: 15 columna: 15
+Encontré un dos puntos: : en linea: 15 columna: 23
+Encontré un numero: entero en linea: 17 columna: 3
+Encontré letras: a en linea: 17 columna: 10
+Encontré una Cadena:  cadena en linea: 18 columna: 3
+Encontré letras: nombre en linea: 18 columna: 10
+Encontré letras: Impar en linea: 19 columna: 3
+Encontré letras: i en linea: 19 columna: 9
+Encontré letras: metodos en linea: 20 columna: 3
+Encontré que es tipo: publicos en linea: 20 columna: 11
+Encontré un dos puntos: : en linea: 20 columna: 20
+Encontré un constructor: constructor en linea: 21 columna: 3
+Encontré un parentesis de abertura: ( en linea: 21 columna: 15
+Encontré un parentesis de cierre: ) en linea: 21 columna: 16
+Encontré letras: i en linea: 22 columna: 3
+Encontré un signo: = en linea: 22 columna: 5
+Encontré letras: nuevo en linea: 22 columna: 7
+Encontré letras: Impar en linea: 22 columna: 13
+Encontré un parentesis de abertura: ( en linea: 22 columna: 19
+Encontré un parentesis de cierre: ) en linea: 22 columna: 20
+Encontré letras: a en linea: 23 columna: 3
+Encontré un signo: = en linea: 23 columna: 5
+Encontré letras: nombre en linea: 24 columna: 3
+Encontré un signo: = en linea: 24 columna: 10
+Encontré comillas: " en linea: 24 columna: 12
+Encontré comillas: " en linea: 24 columna: 13
+Encontré un numero: entero en linea: 26 columna: 3
+Encontré letras: inicio en linea: 26 columna: 10
+Encontré un parentesis de abertura: ( en linea: 26 columna: 17
+Encontré un parentesis de cierre: ) en linea: 26 columna: 18
+Encontré un escribir: escribir en linea: 27 columna: 3
+Encontré comillas: " en linea: 27 columna: 12
+Encontré letras: escriba en linea: 27 columna: 14
+Encontré letras: su en linea: 27 columna: 22
+Encontré letras: nombre en linea: 27 columna: 25
+Encontré comillas: " en linea: 27 columna: 32
+Encontré un comentario: // se guarda una cadena de texto en la variable nombre
+ en linea: 28 columna: 3
+Encontré un leer: leer en linea: 29 columna: 3
+Encontré letras: nombre en linea: 29 columna: 8
+Encontré un punto y coma: ; en linea: 29 columna: 15
+Encontré un escribir: escribir en linea: 30 columna: 3
+Encontré comillas: " en linea: 30 columna: 12
+Encontré letras: escriba en linea: 30 columna: 14
+Encontré letras: un en linea: 30 columna: 22
+Encontré letras: valor en linea: 30 columna: 25
+Encontré letras: entre en linea: 30 columna: 31
+Encontré letras: y en linea: 30 columna: 39
+Encontré comillas: " en linea: 30 columna: 43
+Encontré un comentario: // se guarda un numero en la variable a
+ en linea: 31 columna: 3
+Encontré un leer: leer en linea: 32 columna: 3
+Encontré letras: a en linea: 32 columna: 8
+Encontré un comentario: /* escribe en pantalla la constante junto
+34 * al valor de la variable nombre
+35 */ en linea: 33 columna: 3
+Encontré un escribir: escribir en linea: 36 columna: 3
+Encontré comillas: " en linea: 36 columna: 12
+Encontré letras: Hola en linea: 36 columna: 14
+Encontré comillas: " en linea: 36 columna: 19
+Encontré un coma: , en linea: 36 columna: 20
+Encontré letras: nombre en linea: 36 columna: 22
+Encontré una sentencia: si en linea: 37 columna: 3
+Encontré letras: i en linea: 37 columna: 6
+Encontré un punto: . en linea: 37 columna: 7
+Encontré letras: esImpar en linea: 37 columna: 9
+Encontré un parentesis de abertura: ( en linea: 37 columna: 17
+Encontré letras: a en linea: 37 columna: 18
+Encontré un parentesis de cierre: ) en linea: 37 columna: 19
+Encontré una sentencia: entonces en linea: 37 columna: 21
+Encontré un escribir: escribir en linea: 38 columna: 3
+Encontré comillas: " en linea: 38 columna: 12
+Encontré letras: El en linea: 38 columna: 13
+Encontré letras: numero en linea: 38 columna: 16
+Encontré letras: que en linea: 38 columna: 23
+Encontré letras: eligio en linea: 38 columna: 27
+Encontré letras: es en linea: 38 columna: 34
+Encontré letras: impar en linea: 38 columna: 37
+Encontré comillas: " en linea: 38 columna: 43
+Encontré una sentencia: sino en linea: 39 columna: 3
+Encontré un escribir: escribir en linea: 40 columna: 3
+Encontré comillas: " en linea: 40 columna: 12
+Encontré letras: El en linea: 40 columna: 13
+Encontré letras: numero en linea: 40 columna: 16
+Encontré letras: que en linea: 40 columna: 23
+Encontré letras: eligio en linea: 40 columna: 27
+Encontré letras: es en linea: 40 columna: 34
+Encontré letras: par en linea: 40 columna: 37
+Encontré comillas: " en linea: 40 columna: 41
+Encontré una sentencia: devolver en linea: 41 columna: 3
+Encontré un comentario: /* ´area de declaraci´on de funci´on de carga inicial */ en linea: 43 columna: 3
+Encontré un numero: entero en linea: 44 columna: 3
+Encontré letras: Principal en linea: 44 columna: 10
+Encontré un parentesis de abertura: ( en linea: 44 columna: 20
+Encontré un parentesis de cierre: ) en linea: 44 columna: 21
+Encontré letras: HolaMundo en linea: 45 columna: 3
+Encontré letras: hola en linea: 45 columna: 13
+Encontré un signo: = en linea: 45 columna: 18
+Encontré un instanciar: instanciar en linea: 45 columna: 20
+Encontré letras: HolaMundo en linea: 45 columna: 31
+Encontré un parentesis de abertura: ( en linea: 45 columna: 41
+Encontré un parentesis de cierre: ) en linea: 45 columna: 42
+Encontré letras: hola en linea: 46 columna: 3
+Encontré un punto: . en linea: 46 columna: 8
+Encontré letras: inicio en linea: 46 columna: 10
+Encontré un parentesis de abertura: ( en linea: 46 columna: 17
+Encontré un parentesis de cierre: ) en linea: 46 columna: 18
+Encontré una sentencia: devolver en linea: 47 columna: 3
+
