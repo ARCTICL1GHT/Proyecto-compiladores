@@ -28,7 +28,7 @@ public class Principal {
         
         try {
             // TODO code application logic heretry {
-            Testeo lexico = new Testeo(new FileReader("src/main/java/com/mycompany/proyectocompiladores/Texto.txt"));
+            Testeo lexico = new Testeo(new FileReader("src/main/java/com/mycompany/proyectocompiladores/Texto.loop"));
             Sintactico sintactico = new Sintactico((Scanner) lexico);
             sintactico.parse();
             ArrayList<Tablas> sim = lexico.sim;
