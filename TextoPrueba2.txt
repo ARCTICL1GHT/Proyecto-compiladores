@@ -1,0 +1,34 @@
+/*área de inclusión de bibliotecas externas*/
+Clase Impar
+Propiedades Privada:
+Propiedades Privada:
+Propiedades Publica:
+Metodos Publico:
+entero esImpar(entero numero)
+si numero % 2 entonces
+devolver 2
+sino
+devolver 0
+
+Metodos Privados:
+
+Clase HolaMundo
+
+Propiedades Privada:
+    entero aux1
+    cadena nombre
+    Impar aux2
+    Metodos Publico:
+    Constructor()
+    aux3 = nuevo Impar()
+    aux4 = 5
+    nombre = ""
+    devolver aux2.esImpar(aux1)
+cadena getNombre()
+      devolver nombre
+Metodos Publico:
+entero esImpar(entero numero)
+si numero % 2 entonces
+devolver 2
+sino
+devolver 0

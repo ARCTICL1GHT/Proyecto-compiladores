@@ -1,0 +1,180 @@
+package com.mycompany.proyectocompiladores;
+import java_cup.runtime.Symbol;
+
+
+terminal CLASE, PROPIEDADES, METODOS;
+terminal IF, ENTONCES, SINO;
+terminal LEER, ESCRIBIR;
+terminal DEVOLVER, CONSTRUCTOR, DESTRUCTOR, PRINCIPAL, INSTANCIAR, DESDE, MIENTRAS;
+terminal INCREMENTO, DECREMENTO, HACER, EXTIENDE;
+terminal PARENTESIS1, PARENTESIS2, COMA;
+terminal IGUAL, AND, OR, DOS_PUNTOS;
+terminal PUNTO_Y_COMA;
+terminal VARIABLE, RAIZ;
+terminal MENOS, PUNTO;
+terminal VARIABLE_CLASE,ELIMINAR;
+terminal TIPO_DATO,OPERADORES;
+terminal SUMA, RESTA, MULTIPLICACION, DIVISION, EXPONENCIACION, MODULO;
+terminal MENOR_QUE, MAYOR_QUE, DISTINTO_QUE, IGUAL_QUE, INCREMENTAR, DECREMENTAR;
+terminal SENO, COSENO, TANGENTE, LOGARITMO, TIPO_DE_METODOS;
+terminal CADENA_A_BOOLEANO, CADENA_A_REAL, CADENA_A_ENTERO, CADENA;
+terminal SIGNOS, FUNCION_ESPECIAL, FUNCIONES_CLICLOS_ETC,COMENTARIO,SALTO_LINEA,EJECUTAR, NUMERO_DECIMAL;
+terminal VERDADERO, FALSO, NEW;
+
+non terminal S;
+non terminal CLASE_GENERAL, CLASE_PARTICULAR, VARIABLES_PROPIEDADES, VARIABLES_PROPIEDADES2;
+non terminal PROPIEDAD_CLASE, METODO_CLASE, METODOS_PARTICULAR;
+non terminal FINAL_DE_LINEA,SALTO,CODIGO_GENERAL,METODO_RETORNO, METODO_EJECUTAR;
+non terminal METODO_CODIGO, METODO_SINCODIGO,OPERACION, ASIGNACION, SIGNO_MATE,CONCATENACION, LOGICO,LEER_ESCRIBIR;
+non terminal DEVOLVER_METODO;
+non terminal CONDICION, CODIGO_CONDICION, SINO_GENERAL;
+non terminal CICLO_FOR, CICLO_DO_WHILE, DECLARAR_FOR;
+non terminal INSTANCIAR_CLASE, FUNCIONES,VARIABLES,VARIABLE_REPETIDAS;
+non terminal IGUAL_CLASE,METODOS_OBJETOS;
+
+start with S;
+
+S ::= CLASE_GENERAL;
+
+CLASE_GENERAL ::=          CLASE_PARTICULAR CLASE_GENERAL  
+                           |CLASE_PARTICULAR ;
+
+CLASE_PARTICULAR ::=       CLASE VARIABLE_CLASE   {:System.out.println("Encontre un de clase");:}                            
+                           |CLASE VARIABLE_CLASE PROPIEDAD_CLASE METODO_CLASE {:System.out.println("Encontre un de clase");:}
+                           |CLASE VARIABLE_CLASE PROPIEDAD_CLASE   {:System.out.println("Encontre un de clase");:}           
+                           |CLASE VARIABLE_CLASE METODO_CLASE {:System.out.println("Encontre un de clase");:}
+                           |CLASE TIPO_DATO {:System.out.println("Encontre un de clase");:}                              
+                           |CLASE TIPO_DATO PROPIEDAD_CLASE METODO_CLASE {:System.out.println("Encontre un de clase");:}
+                           |CLASE TIPO_DATO PROPIEDAD_CLASE {:System.out.println("Encontre un de clase");:}
+                           |CLASE TIPO_DATO METODO_CLASE {:System.out.println("Encontre un de clase");:}
+                            ;               
+
+PROPIEDAD_CLASE ::=        PROPIEDADES TIPO_DE_METODOS DOS_PUNTOS {:System.out.println("Encontre un de clase");:}
+                           |PROPIEDADES TIPO_DE_METODOS DOS_PUNTOS VARIABLES_PROPIEDADES {:System.out.println("Encontre un de clase");:}
+                           |PROPIEDADES TIPO_DE_METODOS DOS_PUNTOS VARIABLES_PROPIEDADES PROPIEDAD_CLASE {:System.out.println("Encontre un de clase");:}
+                           |PROPIEDADES TIPO_DE_METODOS DOS_PUNTOS PROPIEDAD_CLASE {:System.out.println("Encontre un de clase");:}
+                            ;
+
+VARIABLES_PROPIEDADES ::=   TIPO_DATO VARIABLE_REPETIDAS {:System.out.println("Encontre una variable");:}
+                           |TIPO_DATO VARIABLE_REPETIDAS VARIABLES_PROPIEDADES {:System.out.println("Encontre una variable");:}
+                           ;
+VARIABLE_REPETIDAS ::= VARIABLE {:System.out.println("Encontre una variable");:}
+                       |VARIABLE COMA VARIABLE_REPETIDAS {:System.out.println("Encontre una variable");:}
+                       ;
+
+METODO_CLASE ::=           METODOS TIPO_DE_METODOS DOS_PUNTOS METODOS_PARTICULAR   {:System.out.println("Encontre un de clase");:}
+                           |METODOS TIPO_DE_METODOS DOS_PUNTOS METODOS_PARTICULAR METODO_CLASE {:System.out.println("Encontre un de clase");:}
+                           |METODOS TIPO_DE_METODOS DOS_PUNTOS {:System.out.println("Encontre un de clase");:}
+                           ;
+
+          
+METODOS_PARTICULAR ::=      METODO_RETORNO  {:System.out.println("Encontre Metodos");:}
+                            |METODO_EJECUTAR {:System.out.println("Encontre Metodos");:}
+                            |METODO_RETORNO METODOS_PARTICULAR {:System.out.println("Encontre Metodos");:}
+                            |METODO_EJECUTAR METODOS_PARTICULAR {:System.out.println("Encontre Metodos");:}
+                            ;
+
+METODO_RETORNO ::=          TIPO_DATO VARIABLE PARENTESIS1 PARENTESIS2 DEVOLVER_METODO  {:System.out.println("Encontre variable");:}                                                                     
+                            |TIPO_DATO VARIABLE PARENTESIS1 VARIABLES_PROPIEDADES2 PARENTESIS2 DEVOLVER_METODO    {:System.out.println("Encontre variable");:} 
+                            |TIPO_DATO PARENTESIS1 PARENTESIS2 {:System.out.println("Encontre parentesis");:}
+                            |TIPO_DATO VARIABLE PARENTESIS1 PARENTESIS2 CODIGO_GENERAL DEVOLVER_METODO              {:System.out.println("Encontre variable");:}                                                             
+                            |TIPO_DATO VARIABLE PARENTESIS1 VARIABLES_PROPIEDADES2 PARENTESIS2 CODIGO_GENERAL DEVOLVER_METODO    {:System.out.println("Encontre variable");:} 
+                            |TIPO_DATO PARENTESIS1 PARENTESIS2 CODIGO_GENERAL {:System.out.println("Encontre parentesis");:}
+                            |TIPO_DATO PARENTESIS1 PARENTESIS2 CODIGO_GENERAL DEVOLVER_METODO {:System.out.println("Encontre variable");:} 
+                            |TIPO_DATO PRINCIPAL PARENTESIS1 PARENTESIS2 CODIGO_GENERAL  {:System.out.println("Encontre variable");:} 
+                            ;
+
+DEVOLVER_METODO ::=         DEVOLVER OPERACION  {:System.out.println("Encontre metodo");:} 
+                            |DEVOLVER CONCATENACION  {:System.out.println("Encontre metodo");:}
+                            |DEVOLVER METODOS_OBJETOS  {:System.out.println("Encontre metodo");:}
+                            ;
+
+
+METODO_EJECUTAR ::=        EJECUTAR VARIABLE PARENTESIS1 VARIABLES_PROPIEDADES2 PARENTESIS2         {:System.out.println("Encontre metodo");:}               
+                           |EJECUTAR VARIABLE PARENTESIS1 PARENTESIS2  {:System.out.println("Encontre metodo");:}
+                           |EJECUTAR VARIABLE PARENTESIS1 VARIABLES_PROPIEDADES2 PARENTESIS2 CODIGO_GENERAL  {:System.out.println("Encontre metodo");:}
+                           |EJECUTAR VARIABLE PARENTESIS1 PARENTESIS2 CODIGO_GENERAL  {:System.out.println("Encontre metodo");:}
+                           ;
+                    
+CODIGO_GENERAL ::=         ASIGNACION   {:System.out.println("Encontre Asignacion");:}
+                           |LEER_ESCRIBIR   {:System.out.println("Encontre Asignacion");:}
+                           |LEER_ESCRIBIR CODIGO_GENERAL {:System.out.println("Encontre Asignacion");:}
+                           |ASIGNACION CODIGO_GENERAL {:System.out.println("Encontre Asignacion");:}
+                           |CONDICION {:System.out.println("Encontre Sentencias");:}
+                           |CICLO_FOR {:System.out.println("Encontre Sentencias");:}
+                           |INSTANCIAR_CLASE {:System.out.println("Encontre Sentencias");:}
+                           ;
+
+
+VARIABLES_PROPIEDADES2 ::= TIPO_DATO VARIABLE   {:System.out.println("Encontre Variable");:}
+                           |TIPO_DATO VARIABLE COMA VARIABLES_PROPIEDADES2 {:System.out.println("Encontre Sentencias");:}
+                           |TIPO_DATO VARIABLE IGUAL OPERACION {:System.out.println("Encontre Sentencias");:}
+                           ;
+
+
+ASIGNACION ::=              VARIABLE IGUAL OPERACION {:System.out.println("Encontre Operacion");:}
+                            |VARIABLE IGUAL CONCATENACION {:System.out.println("Encontre Operacion");:}
+                            |VARIABLE IGUAL LOGICO {:System.out.println("Encontre Operacion");:}
+                            ;
+
+LEER_ESCRIBIR ::=          ESCRIBIR OPERACION {:System.out.println("Encontre Operacion");:}
+                           |ESCRIBIR CONCATENACION {:System.out.println("Encontre Operacion");:}
+                           |LEER VARIABLE {:System.out.println("Encontre Variable");:}
+                           ;
+                             
+
+LOGICO ::=                 VERDADERO 
+                           |FALSO   
+                            ;
+
+SIGNO_MATE ::=              SUMA                    
+                            |RESTA                  
+                            |MULTIPLICACION         
+                            |DIVISION              
+                            |MODULO            
+                            ;
+
+CONCATENACION ::=           CADENA 
+                            |CADENA COMA CONCATENACION
+                            |CADENA COMA OPERACION
+                            ;
+                    
+
+OPERACION  ::=              VARIABLE
+                            |NUMERO_DECIMAL
+                            |VARIABLE SIGNO_MATE OPERACION    
+                            |NUMERO_DECIMAL SIGNO_MATE OPERACION
+                            ;
+
+
+CONDICION  ::=              IF CODIGO_CONDICION ENTONCES CODIGO_GENERAL DEVOLVER_METODO SINO
+                            |IF CODIGO_CONDICION ENTONCES CODIGO_GENERAL SINO
+                            |IF CODIGO_CONDICION ENTONCES DEVOLVER_METODO SINO
+                            ;
+
+
+CODIGO_CONDICION ::=        OPERACION
+                            |VARIABLE SIGNOS NUMERO_DECIMAL
+                            ;
+
+
+
+CICLO_FOR    ::=           DESDE VARIABLES_PROPIEDADES2 MIENTRAS CODIGO_CONDICION INCREMENTAR NUMERO_DECIMAL HACER CODIGO_GENERAL
+                           |HACER CODIGO_GENERAL MIENTRAS CODIGO_CONDICION CODIGO_GENERAL
+                           |DESDE VARIABLES_PROPIEDADES2 MIENTRAS CODIGO_CONDICION INCREMENTAR NUMERO_DECIMAL HACER
+                           |HACER CODIGO_GENERAL MIENTRAS CODIGO_CONDICION
+                           ;
+
+INSTANCIAR_CLASE ::=       VARIABLE_CLASE VARIABLE IGUAL NEW VARIABLE_CLASE PARENTESIS1 PARENTESIS2 CODIGO_GENERAL 
+                           |VARIABLE_CLASE VARIABLE IGUAL NEW VARIABLE_CLASE PARENTESIS1 PARENTESIS2 
+                           |VARIABLE IGUAL NEW VARIABLE_CLASE PARENTESIS1 PARENTESIS2 CODIGO_GENERAL 
+                           |VARIABLE IGUAL NEW VARIABLE_CLASE PARENTESIS1 PARENTESIS2 
+                           |VARIABLE IGUAL NEW TIPO_DATO PARENTESIS1 PARENTESIS2 CODIGO_GENERAL 
+                           |VARIABLE IGUAL NEW TIPO_DATO PARENTESIS1 PARENTESIS2 
+                           ;
+
+METODOS_OBJETOS ::=        VARIABLE SIGNOS VARIABLE PARENTESIS1 VARIABLE_REPETIDAS PARENTESIS2 
+                           |VARIABLE SIGNOS PARENTESIS1 PARENTESIS2
+                           ;                            
+
+

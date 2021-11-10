@@ -1,4 +1,3 @@
-/*asdasdasdAáAáäÁ*/
 Clase Impar
 Propiedades Privada:
 Propiedades Privada:

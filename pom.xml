@@ -10,8 +10,28 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.vbmacher</groupId>
+            <artifactId>java-cup-runtime</artifactId>
+            <version>11b</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.mycompany.proyectocompiladores.Principal</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>de.jflex</groupId>
                 <artifactId>jflex-maven-plugin</artifactId>
@@ -24,24 +44,51 @@
                         <configuration>
                             <outputDirectory>src/main/java/</outputDirectory>
                             <lexDefinitions>
-                                <lexDefinition>src/main/java/com/mycompany/proyectocompiladores/</lexDefinition>
+                                <lexDefinition>src/main/java/com/mycompany/proyectocompiladores/Lexemas.flex</lexDefinition>
                             </lexDefinitions>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.aapache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
+                <groupId>com.github.vbmacher</groupId>
+                <artifactId>cup-maven-plugin</artifactId>
+                <version>11b-20160615-1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>Main</mainClass>
-                        </manifest>
-                    </archive>
+                    <className>Sintactico</className>
+                    <symbolsName>sym</symbolsName>
+                    <cupDefinition>src/main/java/com/mycompany/proyectocompiladores/cup.cup</cupDefinition>
+                    <outputDirectory>src/main/java</outputDirectory>
                 </configuration>
+            </plugin>
+      <!-- any other plugins -->
+            <plugin>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <executions>
+                <execution>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>single</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                  <archive>
+                            <manifest>
+                              <mainClass>com.mycompany.proyectocompiladores.Principal</mainClass>
+                            </manifest>
+                    </archive>
+                <descriptorRefs>
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+              </configuration>
             </plugin>
         </plugins>
     </build>
