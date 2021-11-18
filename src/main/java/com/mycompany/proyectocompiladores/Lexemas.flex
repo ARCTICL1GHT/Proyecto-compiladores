@@ -181,7 +181,6 @@ public void add(String nuevo) {
     Corchete1 = "["
     Corchete2 = "]"
     Punto = "."
-
     CadenaEntero = "cadenaAEntero"
     CadenaReal = "cadenaAReal"
     CadenaBooleano = "cadenaABoleano"
@@ -217,7 +216,6 @@ public void add(String nuevo) {
         {   
           this.add("TIPO BOOLEANO ");
           return new Symbol(sym.TIPO_DATO);
-          
         }
 
     {Tipo_cadena}
