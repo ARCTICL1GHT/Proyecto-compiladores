@@ -1,5 +1,5 @@
-##Fase 1 de Proyecto de Compiladores
-El programa realiza la comprobacion de texto, en el cual hay en existencia cuatro archivos el cual uno es el ingreso del texto(Texto.txt) y la salida compilado(Salida.txt) como main Test.java y el programa de modificacion lexica lexemas.flex
+##Fase 2 de Proyecto de Compiladores
+El programa realiza la comprobacion de sintactica, en el cual hay en existencia cuatro archivos el cual uno es el ingreso del texto(Texto.loop) y la salida compilado(Salida.txt) como main Test.java y el programa de modificacion lexica lexemas.flex
 ###Nombres y carnets
 * Hervert Damian -> 1504419
 * André Gordillo -> 1582519

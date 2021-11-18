@@ -1,0 +1,29 @@
+/*área de inclusión de bibliotecas externas*/
+Clase Numeros
+Propiedades Privada:
+Propiedades Publica:
+Metodos Publico:
+entero esAnilisis(entero numero)
+si numero % 2 entonces
+devolver 2
+sino
+devolver 0
+Metodos Privados:
+
+Clase Prueba
+
+Metodos Privados:
+entero esImpar(entero numero)
+si numero % 5 entonces
+devolver 2
+sino
+devolver 0
+cadena getNombre()
+devolver nombre
+
+Metodos Publico:
+entero esImpar(entero numero)
+si numero % 2 entonces
+devolver 2
+sino
+devolver 0
